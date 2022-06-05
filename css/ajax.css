@@ -1,0 +1,139 @@
+/* ajax css */
+
+.post-wraper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5%;
+    position: absolute;
+    font-family: 'Lato';
+    top: 50%;
+    left: 10%;
+    width: 80%;
+    
+}
+.posts {
+    max-width: 120px;
+    width: 100%;
+    margin-bottom: 1%;
+    margin-right: 1%;
+    padding: 2%;
+    border-radius: 22%;
+    border: 1px solid #BFBFBF;
+    background-color: white;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    text-align: center;
+    display: block;
+}
+.posts:hover {
+    border: 2px solid #327063;
+    background-color: rgb(58, 110, 106);
+    border-radius: 2em 1em 4em / 0.5em 3em;
+    
+}
+.overlay, .overlay-add {
+    position: fixed;
+    top: 40%;
+    left: 22%;
+    transform: translate(-40%, -40%);
+    padding: 15px 35px;
+    border-radius: 12%;
+    max-width: 500px;
+    width: 80%;
+    height: 70%;
+    background-color: rgb(58, 110, 106);
+    opacity: 90%;
+    display: none;
+    box-sizing: border-box;
+    color: rgb(190, 233, 222);    
+}
+
+.active {
+    display: block;
+}
+#close, #close-2 {
+    position: absolute;
+    top: 5%;
+    right: 7%;
+    font-size: 50px;
+    color: white;
+    
+}
+#close:hover,
+#close-2:hover,
+#close:focus,
+#close-2:focus {
+  color: rgb(8, 19, 19);
+  cursor: pointer;
+}
+
+.delete, button {
+    width: 80%;
+    padding: 2% 2%;
+    border-radius: 5%;
+    border: none;
+    box-shadow: 10px 10px 8px #345055;
+}
+.hide {
+    display: none;
+}
+
+.add-post {
+    max-width: 5px;
+    width: 100%;
+    height: 15px;
+    font-size: 20px;
+    padding: 20px 20px;
+    cursor: pointer;
+    position: fixed;
+    right: 50px;
+    /* bottom: 30px; */
+    transform: translate(-40%, -40%);
+    background-color: rgba(126, 155, 94, 0);
+    margin: 10px;
+    text-align: center;
+    border-radius: 5%;
+    position: absolute;
+    margin-top: -10%;
+}
+
+.add-post:after {
+    box-sizing: border-box;
+    padding-top: 13px;
+    content: "+";
+    background-color: #506b70;
+    width: 100%;
+    z-index: -3;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: -7px;
+}
+
+div {
+    /* background-color: rgb(138, 160, 157); */
+    padding: 5px;
+    display: block;
+  }
+    
+/* .add-post:hover + div {
+    display: block;
+    z-index: -9999;
+  } */
+
+.add-post:hover, .add-post:hover.ex2:active {font-size: 160%; background-color: #559397;}
+
+#form {
+    display: flex;  
+    flex-direction: column;
+    gap: 10px;
+    align-content: space-between;
+}
+#body {
+    height: 200px;
+    width: 90%;
+}
+
+* {
+    outline: none;
+}
