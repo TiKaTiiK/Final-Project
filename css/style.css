@@ -97,6 +97,10 @@ section{
     height: 6rem;
 }
 
+#logo{
+    display: none;
+}
+
 video {
     width: 8rem;
     height: 7rem;
@@ -954,7 +958,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefd', end
     .home .content p{
         font-size: 1.5rem;
     }
+    video {
+        display: none;
+    }
 
+    #logo {
+        display: block;
+    }
 }
 
 @media (max-width:450px){
