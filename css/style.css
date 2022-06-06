@@ -106,6 +106,9 @@ video {
     height: 7rem;
 }
 
+.navbar {
+    opacity: 0.8;
+}
 .header .navbar a{
     margin:0 1rem;
     font-size: 1.6rem;
@@ -178,6 +181,17 @@ video {
 .header .search-form label:hover{
     color:var(--main-color);
 }
+
+.cart-items-container{
+    opacity: 0.8;
+}
+/* 
+.cart-items-container {
+    display: block;
+}
+.hide1 {
+    display: none;
+}  */
 
 .header .cart-items-container{
     position: absolute;
