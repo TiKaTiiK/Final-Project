@@ -121,7 +121,7 @@ div {
     z-index: -9999;
   } */
 
-.add-post:hover, .add-post:hover.ex2:active {font-size: 160%; background-color: #559397;}
+/* .add-post:hover, .add-post:hover.ex2:active {font-size: 160%; background-color: #559397;} */
 
 #form {
     display: flex;  

@@ -327,7 +327,32 @@
 
     <div class="container">
         <h3 class="accordion-title">Review <span>100+</span> <i class="fa-solid fa-angle-down"></i></h3>
-        <p class="accordion-description">Ajax Div</p>
+        <p class="accordion-description"></p>
+        <!-- ajax posts -->
+        <div class="post-wraper" id="post-block">
+
+        </div>
+
+        <div class="overlay" id="overlay">
+            <div id="content"></div>
+            <div id="close"> X </div>
+        </div>
+
+        <div class="add-post" id="add-post">  </div>
+        <div id="overlay-add" class="overlay-add">
+            <div id="close-2"> X </div>
+            <form id="form" action="">
+                <div>
+                    <div><label for=""> Title </label></div>
+                    <input id="title" type="text" placeholder="Title">
+                </div>
+                <div>
+                    <div><label for=""> Description </label></div>
+                    <textarea name="Description" id="body" placeholder="Description"></textarea>
+                </div>
+                <button>ADD POST</button>
+            </form>
+        </div>
     </div>
      
 </section>
