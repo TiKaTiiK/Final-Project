@@ -4,7 +4,7 @@ document.querySelector('#menu-btn').onclick = () =>{
     navbar.classList.toggle('active');
     searchForm.classList.remove('active');
     cartItem.classList.remove('active');
-}
+};
 
 let searchForm = document.querySelector('.search-form');
 
@@ -12,7 +12,7 @@ document.querySelector('#search-btn').onclick = () =>{
     searchForm.classList.toggle('active');
     navbar.classList.remove('active');
     cartItem.classList.remove('active');
-}
+};
 
 let cartItem = document.querySelector('.cart-items-container');
 
@@ -20,13 +20,13 @@ document.querySelector('#cart-btn').onclick = () =>{
     cartItem.classList.toggle('active');
     navbar.classList.remove('active');
     searchForm.classList.remove('active');
-}
+};
 
 window.onscroll = () =>{
     navbar.classList.remove('active');
     searchForm.classList.remove('active');
     cartItem.classList.remove('active');
-}
+};
 
 
 
@@ -45,28 +45,23 @@ window.onload = function() {
 
 /* slider script*/
 
-let sliderWrap = document.querySelector('.slider-wrap');
+
 let slider = document.querySelector('.slider');
-let clonesWidth;
-let sliderWidth;
 let clones = [];
-let disableScroll = false;
-let scrollPos;
 
 let items = [...document.querySelectorAll('.slider-item')];
 let images = [...document.querySelectorAll('.img-div')];
 
 images.forEach((image, idx) => {
     image.style.backgroundImage = 'url(./images/'+(idx+1)+'.jpg)';
-})
+});
 
 items.forEach(item => {
     let clone = item.cloneNode(true);
     clone.classList.add('clone');
     slider.appendChild(clone);
-    clones.push(clone);
-    console.log(clones);
-})
+    clones.push(clone);   
+});
 
 var scrollContainer = document.getElementsByClassName("slider-wrap")[0];
 scrollContainer.addEventListener("wheel", (evt) => {
@@ -119,7 +114,7 @@ function ajax(url, callback) {
     request.addEventListener ('load', function (){
         let data = JSON.parse(request.responseText);
         callback(data);
-    })
+    });
     request.send();
 }
 
@@ -142,7 +137,7 @@ function createPost (item) {
         postOverlay.classList.remove('active');
         let id = event.target.getAttribute('data-id');
         openOverlay(id);
-    })
+    });
 
     let h2Tag =document.createElement('h2');
     h2Tag.innerText = item.id;
@@ -163,8 +158,8 @@ function createPost (item) {
         event.stopPropagation(); // ar gadasces mshobels
         let id = event.target.getAttribute('data-id');
         deletePost(id);
-        divWrapper.classList.add('hide')
-    })
+        divWrapper.classList.add('hide');
+    });
     mainWraperPost.appendChild(divWrapper);
     accordion.appendChild(mainWraperPost);
    
@@ -175,11 +170,11 @@ function createPost (item) {
 function openOverlay(id) { 
     if  (id !== null) {
         overlay.classList.add('active');
-        let url = `https://jsonplaceholder.typicode.com/posts/${id}`
+        let url = `https://jsonplaceholder.typicode.com/posts/${id}`;
     
         ajax(url, function(data){
             overlayFunction(data);
-        })
+        });
     } else {
         overlay.classList.add('active');
         let h2Tag =document.createElement('h2');
@@ -191,7 +186,7 @@ function deletePost(id) {
     let url = `https://jsonplaceholder.typicode.com/posts/${id}`;
     fetch(url, {
         method: 'DELETE',
-    })
+    });
     
 }
 
@@ -213,23 +208,23 @@ function overlayFunction (item) {
 
 closeOverlay.addEventListener("click", function() {
     overlay.classList.remove('active');
-})
+});
 
 addButton.addEventListener('click', function() {
     overlay.classList.remove('active');
     postOverlay.classList.add('active');
-})
+});
 
 closeOverlayPost.addEventListener("click", function() {   
     postOverlay.classList.remove('active');
-})
+});
 
 form.addEventListener('submit', function(event) {
-    event.preventDefault() // vachereb default action-s
+    event.preventDefault(); // vachereb default action-s
     let item = {  
         title: event.target[0].value,
         body: event.target[1].value,
-    }
+    };
 
     fetch ('https://jsonplaceholder.typicode.com/posts', {
         method: 'POST',
@@ -244,5 +239,5 @@ form.addEventListener('submit', function(event) {
     item.id = mainWraperPost.childNodes.length +=0;
     createPost(item);
     postOverlay.classList.remove('active');
-})
+});
 

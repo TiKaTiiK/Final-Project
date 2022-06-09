@@ -21,7 +21,7 @@
 
 <header class="header">
 
-    <a loop autoplay href="#" class="logo">
+    <a  href="#" class="logo">
         <video loop autoplay>
             <source src="images/1.mp4" type="video/mp4">
         </video>  
@@ -29,13 +29,15 @@
     </a>
 
     <nav class="navbar">
-        <a href="#home">home</a>
-        <a href="#about">about</a>
-        <a href="#menu">menu</a>
-        <a href="#products">products</a>
-        <a href="#review">review</a>
-        <a href="#contact">contact</a>
-        <a href="#blogs">blogs</a>
+        <ul class="ul">
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#menu">menu</a></li>
+            <li><a href="#products">products</a></li>
+            <li><a href="#review">review</a></li>
+            <li><a href="#contact">contact</a></li>
+            <li><a href="#blogs">blogs</a></li>
+        </ul>
     </nav>
 
     <div class="icons">
@@ -58,24 +60,24 @@
                 <div class="price">$11.99/-</div>
             </div>
         </div>
-        <div id="cart" class="cart-item">
-            <span id="times"  class="fas fa-times"></span>
+        <div id="cart1" class="cart-item">
+            <span id="times1"  class="fas fa-times"></span>
             <img src="images/cart-item-2.png" alt="">
             <div class="content">
                 <h3>cart item 02</h3>
                 <div class="price">$11.99/-</div>
             </div>
         </div>
-        <div id="cart" class="cart-item">
-            <span id="times"  class="fas fa-times"></span>
+        <div id="cart2" class="cart-item">
+            <span id="times2"  class="fas fa-times"></span>
             <img src="images/cart-item-3.png" alt="">
             <div class="content">
                 <h3>cart item 03</h3>
                 <div class="price">$11.99/-</div>
             </div>
         </div>
-        <div id="cart" class="cart-item">
-            <span id="times"  class="fas fa-times"></span>
+        <div id="cart3" class="cart-item">
+            <span id="times3"  class="fas fa-times"></span>
             <img src="images/cart-item-4.png" alt="">
             <div class="content">
                 <h3>cart item 04</h3>
@@ -101,7 +103,7 @@
 
 <section class="about" id="about">
 
-    <h1 class="heading"> <span>about</span> us </h1>
+    <h2 class="heading"> <span>about</span> us </h2>
 
     <div class="row">
 
@@ -146,7 +148,7 @@
 
 <section class="menu" id="menu">
 
-    <h1 class="heading"> our <span>menu</span> </h1>
+    <h2 class="heading"> our <span>menu</span> </h2>
 
     <div class="box-container">
 
@@ -199,7 +201,7 @@
 
 <section class="products" id="products">
 
-    <h1 class="heading"> our <span>products</span> </h1>
+    <h2 class="heading"> our <span>products</span> </h2>
 
     <div class="box-container">
 
@@ -277,7 +279,7 @@
 
 <section class="review" id="review">
 
-    <h1 class="heading"> customer's <span>review</span> </h1>
+    <h2 class="heading"> customer's <span>review</span> </h2>
 
     <div class="box-container">
 
@@ -341,13 +343,13 @@
         <div class="add-post" id="add-post">  </div>
         <div id="overlay-add" class="overlay-add">
             <div id="close-2"> X </div>
-            <form id="form" action="">
+            <form id="form" action="send">
                 <div>
-                    <div><label for=""> Title </label></div>
+                    <div><label for="title"> Title </label></div>
                     <input id="title" type="text" placeholder="Title">
                 </div>
                 <div>
-                    <div><label for=""> Description </label></div>
+                    <div><label for="body"> Description </label></div>
                     <textarea name="Description" id="body" placeholder="Description"></textarea>
                 </div>
                 <button>ADD POST</button>
@@ -361,13 +363,12 @@
 
 <section class="contact" id="contact">
 
-    <h1 class="heading"> <span>contact</span> us </h1>
+    <h2 class="heading"> <span>contact</span> us </h2>
 
     <div class="row">
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.710434254329!2d44.73699501467497!3d41.70518637923629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4044735ac9ebed33%3A0xc14a7b79cfde84f7!2s83%20Ilia%20Chavchavadze%20Avenue%2C%20T&#39;bilisi!5e0!3m2!1sen!2sge!4v1653920057670!5m2!1sen!2sge" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-        <form action="">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2106.2573286797883!2d44.737932744267624!3d41.70546167844732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4044735adb1a1a31%3A0x7ff1f4d37421c754!2s83%20Ilia%20Chavchavadze%20Avenue%2C%20T&#39;bilisi!5e0!3m2!1sen!2sge!4v1654765004541!5m2!1sen!2sge" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <form action="send">
             <h3>get in touch</h3>
             <div class="inputBox">
                 <span class="fas fa-user"></span>
@@ -392,7 +393,7 @@
 
 <section class="blogs" id="blogs">
 
-    <h1 class="heading"> our <span>blogs</span> </h1>
+    <h2 class="heading"> our <span>blogs</span> </h2>
 
     <div class="box-container">
 
@@ -438,7 +439,7 @@
 
 <!-- footer section starts  -->
 
-<section class="footer">
+<footer class="footer">
 
     <div class="share">
         <a href="#" class="fab fa-facebook-f"></a>
@@ -460,7 +461,7 @@
 
     <div class="credit">created by <span>Tinatin Nanitashvili</span> | all rights reserved</div>
 
-</section>
+</footer>
 
 <div id="bee"></div>
 <script src="js/script.js"></script>
